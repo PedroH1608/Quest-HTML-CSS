@@ -1,0 +1,141 @@
+body {
+    background: url(../images/bg-desktop.svg) center center no-repeat, var(--background-color);
+    background-size: cover;
+    padding: 30px 60px 60px 60px;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: "header header"
+        "section section"
+        "footer footer";
+}
+
+@media (max-width: 500px) {
+    body {
+        background: url(../images/bg-mobile.svg) center center no-repeat, var(--background-color);
+        background-size: contain;
+        height: 100vh;
+        padding: 30px 30px 60px 30px;
+    }
+}
+
+
+
+
+.header {
+    grid-area: header;
+}
+
+
+
+
+.section {
+    grid-area: section;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 768px) {
+    .section {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+
+
+
+
+.section-left {
+    background: url(../images/illustration-mockups.svg) center center no-repeat;
+    background-size: contain;
+}
+
+
+
+
+.section-right {
+    color: #fff;
+    padding: 40px;
+}
+
+.section-right h1 {
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.section-right p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    margin: 20px 0 50px 0;
+}
+
+.section-right a {
+    background-color: #fff;
+    color: var(--background-color);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    border-radius: 50px;
+    padding: 15px 70px 15px 70px;
+    font-size: 22px;
+}
+
+.section-right a:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    transition: 0.3s;
+}
+
+@media (max-width: 900px) {
+    .section-right {
+        padding: 0 0 20px 0;
+        text-align: center;
+    }
+
+    .section-right h1 {
+        font-size: 30px;
+    }
+
+    .section-right p {
+        font-size: 14px;
+    }
+
+    .section-right a {
+        font-size: 16px;
+    }
+}
+
+
+
+
+.footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: end;
+    max-height: 47px;
+}
+
+.footer i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    border-radius: 50px;
+    border: solid 1px #fff;
+    margin: 0 8px 0 8px;
+    width: 45px;
+    height: 45px;
+    transition: 0.3s;
+    color: #fff;
+}
+
+.footer i:hover {
+    color: var(--primary-color);
+    border: solid 1px var(--primary-color);
+}
+
+@media (max-width: 900px) {
+    .footer {
+        display: none;
+    }
+}
